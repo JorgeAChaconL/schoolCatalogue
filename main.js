@@ -30,7 +30,7 @@ class School{
     }
 
     static pickSubstituteTeacher(substitudeTeacher){
-        substitudeTeacher = ['Teacher1', 'Teacher2', 'Teacher3', 'Teacher4', 'Teacher5'];
+        
         let randomTeacherSelect = Math.floor(Math.random() * substitudeTeacher.length);
         console.log(substitudeTeacher[randomTeacherSelect]);
         return substitudeTeacher[randomTeacherSelect];
@@ -38,7 +38,7 @@ class School{
 };
 
 class PrimarySchool extends School{
-    constructor(name, level, numberOfStudents, pickUpPolicy){
+    constructor(name, numberOfStudents, pickUpPolicy){
         super(name, 'primary', numberOfStudents);
         this._pickUpPolicy = pickUpPolicy;
     }
@@ -49,7 +49,7 @@ class PrimarySchool extends School{
 };
 
 class HighSchool extends School{
-    constructor(name, level, numberOfStudents, sportsTeams){
+    constructor(name, numberOfStudents, sportsTeams){
         super(name, 'high', numberOfStudents);
         this._sportsTeams = sportsTeams;
     };
@@ -60,3 +60,8 @@ class HighSchool extends School{
 }
 
 const lorraineHansbury = new PrimarySchool('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
+
+lorraineHansbury.quickFacts();
+
+School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']);
+
