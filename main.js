@@ -35,6 +35,15 @@ class School{
         console.log(substitudeTeacher[randomTeacherSelect]);
         return substitudeTeacher[randomTeacherSelect];
     }
-}
+};
 
+class PrimarySchool extends School{
+    constructor(name, level, numberOfStudents, pickUpPolicy){
+        super(name, 'primary', numberOfStudents);
+        this._pickUpPolicy = pickUpPolicy;
+    }
 
+    get pickUpPolicy(){
+        return this._pickUpPolicy;
+    }
+};
