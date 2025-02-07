@@ -47,3 +47,16 @@ class PrimarySchool extends School{
         return this._pickUpPolicy;
     }
 };
+
+class HighSchool extends School{
+    constructor(name, level, numberOfStudents, sportsTeams){
+        super(name, 'high', numberOfStudents);
+        this._sportsTeams = sportsTeams;
+    };
+
+    get sportTeams(){
+        return this._sportsTeams;
+    }
+}
+
+const lorraineHansbury = new PrimarySchool('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
