@@ -17,4 +17,11 @@ class School{
         return this._numberOfStudents;
     }
 
+    set numberOfStudents(val){
+        if(typeof val === 'number'){
+            this._numberOfStudents = val;
+        } else {
+            console.log(`Invalid Input | numberOfStudents: ${val} must be set to a Number`);
+        }
+    }
 }
